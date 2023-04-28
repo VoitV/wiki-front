@@ -1,0 +1,45 @@
+.create-article {
+  .create-article-container {
+    .container-header {
+      margin-bottom: 10px;
+
+      .headline {
+        span {
+          font-family: 'Linux Libertine', Georgia, Times, serif;
+          font-size: 2.2em;
+          font-weight: normal;
+          line-height: 1.375;
+        }
+      }
+
+      .container-header-down-text {
+        span {
+          font-size: 12.8px;
+        }
+      }
+    }
+  }
+
+  .container-layaout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layaout-content {
+    position: relative;
+    width: 99%;
+    padding: 0.5em 1em 1em;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0.5px -0.8px 2px 0.01px #ccc;
+  }
+}
+
+a {
+  color: #0b0080;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

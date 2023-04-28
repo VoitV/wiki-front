@@ -1,0 +1,31 @@
+.navbar-left {
+  width: 170px;
+  height: 100%;
+  padding: 0 15px;
+
+  .navbar-logo {
+    img {
+      width: 100%;
+      padding-top: 10px;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    div {
+      margin-bottom: 5px;
+      color: #0645ad;
+      font-size: 0.85em;
+      line-height: 1.125em;
+      word-wrap: break-word;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

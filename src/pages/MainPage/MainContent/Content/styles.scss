@@ -1,0 +1,26 @@
+.main-content {
+  height: max-content;
+  padding: 10px;
+  margin-top: 20px;
+
+  .main-content-container {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    justify-content: space-between;
+
+    div {
+      min-width: 50%;
+    }
+
+    .left-content {
+      min-width: 50%;
+      margin-right: 5px;
+    }
+
+    .right-content {
+      min-width: 50%;
+      margin-left: 5px;
+    }
+  }
+}

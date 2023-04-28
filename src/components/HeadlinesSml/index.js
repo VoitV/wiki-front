@@ -1,0 +1,1 @@
+export { HeadlinesSml } from './HeadlinesSml';

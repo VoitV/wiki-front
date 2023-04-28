@@ -1,0 +1,1 @@
+export { StagesRender } from './StagesRender';

@@ -1,0 +1,1 @@
+export { entrBtn } from './entrBtn';

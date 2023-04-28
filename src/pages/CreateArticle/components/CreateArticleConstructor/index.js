@@ -1,0 +1,1 @@
+export { CreateArticleConstructor } from './CreateArticleConstructor';

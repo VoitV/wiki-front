@@ -1,0 +1,46 @@
+.about {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 20px;
+
+  .about-header {
+    width: 100%;
+    border-bottom: 1px solid black;
+    line-height: 2em;
+
+    span {
+      margin-bottom: 50px 50px 50px;
+      margin-bottom: 5px;
+      font-family: 'Linux Libertine', Georgia, Times, serif;
+      font-size: 1.8em;
+      font-weight: 500;
+    }
+  }
+
+  .about-header-bottom {
+    margin: 15px 0;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+
+  .em-link {
+    padding: 10px;
+    margin-left: 30px;
+
+    &::before {
+      content: 'Докладніше: ';
+    }
+  }
+
+  .em-link-also {
+    padding: 10px;
+    margin-left: 30px;
+
+    &::before {
+      content: 'Див. Також: ';
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.contribution {
+  ol {
+    padding-left: 15px;
+    margin: 5px;
+    counter-reset: item;
+
+    li {
+      display: block;
+      margin: 5px;
+
+      a {
+        color: #0645ad;
+        text-decoration: none;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      &::before {
+        content: counters(item, '.') '.';
+        counter-increment: item;
+      }
+    }
+  }
+}

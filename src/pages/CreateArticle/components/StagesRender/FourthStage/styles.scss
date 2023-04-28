@@ -1,0 +1,37 @@
+.fourth-stage {
+  .fourth-stage-content {
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+
+      .container-left-part {
+        ol {
+          padding-left: 30px !important;
+          margin-bottom: 30px;
+
+          li {
+          }
+        }
+      }
+
+      .container-right-part {
+        width: 40%;
+        height: fit-content;
+        border: 1px solid #aaa;
+
+        .table-info {
+          padding: 5px;
+          font-size: 1em;
+
+          ul {
+            margin: 0 !important;
+
+            li {
+              margin: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

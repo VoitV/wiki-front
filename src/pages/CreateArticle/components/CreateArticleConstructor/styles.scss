@@ -1,0 +1,121 @@
+.create-aticle-contructor {
+  @keyframes appearance {
+    0% {
+      background-color: #a2a9b100;
+    }
+
+    50% {
+      background: rgb(104 100 100 / 32.6%);
+    }
+
+    100% {
+      background: rgb(104 100 100 / 81.1%);
+    }
+  }
+
+  .alert-required {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: appearance;
+    animation-duration: 2s;
+    background: rgb(104 100 100 / 67.5%);
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+
+    .required-content {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    &.show {
+      visibility: visible;
+    }
+  }
+
+  min-height: 100vh;
+
+  .contructor-header {
+  }
+
+  .constructor-layaout {
+    min-height: 100vh;
+    padding: 5px;
+
+    .layaout-create-article-title-container {
+      width: 100%;
+      margin-bottom: 10px;
+
+      .atricle-title-form {
+        display: flex;
+        flex-direction: column;
+
+        span {
+        }
+
+        input {
+          width: 50%;
+          height: 30px;
+          padding: 6px 8px;
+          border: 1px solid #a2a9b1;
+          border-radius: 2px;
+          margin-right: 5px;
+          background-color: #ffffff;
+          box-shadow: inset 0 0 0 1px transparent;
+          color: #000000;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: 1.28em;
+          text-align: justify;
+
+          &:focus {
+            border: 2px solid black;
+            outline: none !important;
+          }
+        }
+      }
+    }
+
+    .layaout-create-atricle-main-text {
+      .atricle-main-text-container {
+        .atricle-main-text-form {
+          span {
+          }
+
+          textarea {
+            width: 100%;
+            height: 70vh;
+            padding: 10px;
+            border: 2px solid #a2a9b1;
+            border-radius: 2px;
+            background-color: #ffffff;
+            font-size: 1.5em;
+            line-height: 1.5em;
+            resize: none;
+
+            &:focus {
+              border: 2px solid black;
+              outline: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    .submit-button {
+      text-align: end;
+
+      .submit-button-container {
+        button {
+          width: 100px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

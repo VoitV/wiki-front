@@ -1,0 +1,30 @@
+.stages-list {
+  display: flex;
+  width: 100%;
+
+  .stage-list-item {
+    position: relative;
+    width: 150px;
+    padding: 4px;
+    border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    margin: 0 10px;
+    margin: 2px 2px 0;
+    background-color: #36c;
+    box-shadow: 0.5px -0.9px 2px 0.01px #ccc;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.stage-list-item-disabled {
+      background: #a2a9b1;
+      pointer-events: none;
+    }
+  }
+}

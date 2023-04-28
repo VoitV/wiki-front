@@ -1,0 +1,24 @@
+.link-article {
+  display: flex;
+  padding-bottom: 5px;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .item-img {
+    img {
+      width: 20px;
+      height: 19px;
+    }
+  }
+
+  .item-name {
+    margin-right: 15px;
+    margin-left: 3px;
+    color: #3366bb;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,14 @@
+.headline {
+  width: 100%;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 2em;
+
+  span {
+    font-family: 'Linux Libertine', Georgia, Times, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.375;
+  }
+}

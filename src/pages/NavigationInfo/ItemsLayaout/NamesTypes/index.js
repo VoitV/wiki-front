@@ -1,0 +1,1 @@
+export { NamesTypes } from './NamesTypes';

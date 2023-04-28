@@ -1,0 +1,54 @@
+.layaout-top {
+  padding: 0 30px;
+  border: 1px solid rgb(128 128 128 / 67.7%);
+  border-top: transparent;
+  margin-top: 20px;
+
+  .layaot-top-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    div {
+      line-height: 1.25;
+      white-space: pre-line;
+    }
+
+    .left-text {
+      span {
+        color: black;
+        font-size: 2em;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .content-nav {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-item {
+      margin: 0 10px;
+      margin-top: 5px;
+      margin-bottom: 8px;
+      color: #061fad;
+
+      a {
+        text-decoration: none;
+
+        &:visited {
+          color: #061fad;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .item-big {
+      font-weight: 600;
+    }
+  }
+}

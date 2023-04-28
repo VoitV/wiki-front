@@ -1,0 +1,1 @@
+export { SameArticles } from './SameArticles';
