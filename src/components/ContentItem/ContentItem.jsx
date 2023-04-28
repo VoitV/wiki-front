@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import parse from 'html-react-parser';
 import './styles.scss';
 
 export const ContentItem = ({
@@ -13,7 +14,7 @@ export const ContentItem = ({
   return (
     <div className="content-item" id={id}>
       <div className="item-title">{articletitle}</div>
-      <div className="item-content">{splicedContent}</div>
+      <div className="item-content">{parse(splicedContent)}</div>
       <div className="item-footer-nav">
         <div className="footer-container">
           <div className="footer-text-more">

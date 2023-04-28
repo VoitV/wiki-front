@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useRef, useState } from 'react';
@@ -5,26 +6,20 @@ import { useNavigate } from 'react-router-dom';
 import { Headlines } from '../../../../components/Headlines';
 import { fetchArticlesPost } from '../../../../api';
 import './styles.scss';
+import { EditorTest } from './editor/EditorTest';
 
 export const CreateArticleConstructor = () => {
   const [titleInputValue, setTitleInputValue] = useState('');
   const [mainTextInputValue, setMainTextInputValue] = useState('');
-  const titleRef = useRef();
-  const mainTextRef = useRef();
   const optionRef = useRef();
   const navigate = useNavigate();
 
   const inputTitleChangeHandler = (e) => {
     setTitleInputValue(e.target.value);
   };
-  const inputContentChangeHandler = (e) => {
-    setMainTextInputValue(e.target.value);
-  };
   const onHadleSubmit = async () => {
-    const titleValue = titleRef.current.value;
-    const mainTextValue = mainTextRef.current.value;
     const optionValue = optionRef.current.value;
-    if (titleValue <= 0 || mainTextValue <= 0) {
+    if (titleInputValue.length <= 0 || mainTextInputValue.length <= 0) {
       const alert = document.getElementsByClassName('alert-required')[0];
       alert.classList.add('show');
       setTimeout(() => {
@@ -32,10 +27,11 @@ export const CreateArticleConstructor = () => {
       }, 3000);
     } else {
       const article = {
-        articleTitle: titleValue,
-        articleContent: mainTextValue,
+        articleTitle: titleInputValue,
+        articleContent: mainTextInputValue,
         articleType: optionValue,
       };
+      console.log(article);
       await fetchArticlesPost(article);
       navigate('/');
     }
@@ -55,7 +51,6 @@ export const CreateArticleConstructor = () => {
               <h1>Придумайте назву статі</h1>
             </span>
             <input
-              ref={titleRef}
               className="title-create-input"
               type="text"
               name="tile"
@@ -83,17 +78,11 @@ export const CreateArticleConstructor = () => {
               <span>
                 <h1>Пишіть вашу статю тут:</h1>
               </span>
-              <textarea
-                className="atricle-main-text-input"
-                type="text"
-                name="content"
-                value={mainTextInputValue}
-                onInput={inputContentChangeHandler}
-                ref={mainTextRef}
-              />
+              <EditorTest text={mainTextInputValue} setMainText={setMainTextInputValue} />
             </form>
           </div>
         </div>
+        <div />
         <div className="submit-button">
           <div className="submit-button-container">
             <button onClick={onHadleSubmit} type="submit">

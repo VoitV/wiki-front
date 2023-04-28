@@ -13,24 +13,28 @@ export const SearchInput = () => {
     setInputText(e?.target?.value);
   };
 
+  // eslint-disable-next-line consistent-return
   useEffect(() => {
     if (inputText === '') {
       setSearchResult([]);
+    } else {
+      const getData = setTimeout(() => {
+        const handleSearch = async () => {
+          const res = await fetchArticlesBySearch(inputText);
+          setSearchResult(res);
+        };
+        handleSearch();
+      }, 500);
+      return () => clearTimeout(getData);
     }
-    const getData = setTimeout(() => {
-      const handleSearch = async () => {
-        const res = await fetchArticlesBySearch(inputText);
-        setSearchResult(res);
-      };
-      handleSearch();
-    }, 500);
-    return () => clearTimeout(getData);
   }, [inputText]);
 
   const onHandleClick = () => {
     setInputText('');
     setSearchResult([]);
   };
+
+  console.log(searchResult);
 
   return (
     <form className="input-search-form">

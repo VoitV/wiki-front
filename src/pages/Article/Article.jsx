@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import parse from 'html-react-parser';
 import { fetchArticleById } from '../../api';
 import { Headlines } from '../../components/Headlines';
 import { Loading } from '../../components/Loading/Loading';
+import './styles.scss';
 
 export const Article = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,7 +38,7 @@ export const Article = () => {
       <div className="article-tile">
         <Headlines text={article.articletitle} />
       </div>
-      <div className="article-content">{article.articlecontent}</div>
+      <div className="article-content">{parse(article.articlecontent)}</div>
     </div>
   );
 };
