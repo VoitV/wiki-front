@@ -5,4 +5,18 @@
   .content-container {
     width: 100%;
   }
+
+  @media only screen and (max-width: 850px) {
+    padding: 20px;
+
+    .navbar-left {
+      display: none;
+    }
+
+    .content-container {
+      .main-layaout {
+        border: 1px solid #a7d7f9;
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import { NavLinkButton } from '../../ui/NavLinkButton';
 import './styles.scss';
+import './adaptive.scss';
 
 export const FifthStage = ({ stageStep, updateStep }) => {
   const onHandleUpdate = () => {

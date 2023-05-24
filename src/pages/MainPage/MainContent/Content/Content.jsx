@@ -5,6 +5,7 @@ import './styles.scss';
 
 export const Content = () => {
   const [loadedItems, setLoadedItems] = useState([]);
+
   useEffect(() => {
     const handleFetchArticles = async () => {
       const artiles = await fetchRandomArticles(5);
@@ -16,7 +17,7 @@ export const Content = () => {
   return (
     <div className="main-content">
       <div className="main-content-container">
-        <div className="left-content">
+        <div className="aricles-content">
           {loadedItems.map((el) => (
             <ContentItem
               key={el.id}
@@ -27,7 +28,6 @@ export const Content = () => {
             />
           ))}
         </div>
-        <div className="right-content" />
       </div>
     </div>
   );

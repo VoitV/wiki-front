@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Headlines } from '../../components/Headlines';
-import './styles.scss';
 import { ItemsLayaout } from './ItemsLayaout';
+import './styles.scss';
+import './adaptive.scss';
 
 const navItems = [
   {

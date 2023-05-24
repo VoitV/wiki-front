@@ -34,8 +34,6 @@ export const SearchInput = () => {
     setSearchResult([]);
   };
 
-  console.log(searchResult);
-
   return (
     <form className="input-search-form">
       <input

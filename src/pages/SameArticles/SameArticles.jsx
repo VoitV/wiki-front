@@ -32,9 +32,9 @@ export const SameArticles = () => {
     );
   }
   return (
-    <div className="organiztaion">
+    <div className="same-articles">
       <Headlines text="Вітаємо у схожих." />
-      <div className="organization-same-container">
+      <div className="same-articles-container">
         {sameArticles.map((el) => (
           <ContentItem
             key={el.id}

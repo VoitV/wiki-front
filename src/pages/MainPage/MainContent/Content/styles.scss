@@ -9,18 +9,9 @@
     height: max-content;
     justify-content: space-between;
 
-    div {
-      min-width: 50%;
-    }
-
-    .left-content {
-      min-width: 50%;
+    .aricles-content {
+      min-width: 100%;
       margin-right: 5px;
-    }
-
-    .right-content {
-      min-width: 50%;
-      margin-left: 5px;
     }
   }
 }

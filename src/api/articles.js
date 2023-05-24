@@ -11,7 +11,9 @@ export const fetchArticlesPost = (reqBody) => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(reqBody),
   };
-  fetch(`${START_URL}/articles`, requestOptions);
+  return fetch(`${START_URL}/articles`, requestOptions)
+    .then((res) => res.json())
+    .then((data) => console.log(data.article));
 };
 
 export const fetchArticleById = (id) =>

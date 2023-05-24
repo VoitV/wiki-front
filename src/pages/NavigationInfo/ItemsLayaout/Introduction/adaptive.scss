@@ -1,0 +1,22 @@
+@media screen and (max-width: 750px) {
+  .layaout-item {
+    .float-right {
+      img {
+        width: 85px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .layaout-item {
+    .float-right {
+      top: 25px;
+      left: 55%;
+
+      img {
+        width: 85px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@media screen and (max-width: 1100px) {
+  .second-stage {
+    .second-stage-info-container {
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .second-stage {
+    .search-form-container {
+      .form-before-alert {
+      }
+
+      form {
+        .input-form {
+          width: 50%;
+        }
+      }
+    }
+
+    .second-stage-info-container {
+      flex-direction: column;
+    }
+  }
+}

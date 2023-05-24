@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles.scss';
 import { ContentsNav } from './ContentsNav';
 import { Introduction } from './Introduction';
 import { BasicInformation } from './BasicInformation';
@@ -9,6 +8,8 @@ import { TechnicalFeatures } from './TechnicalFeatures';
 import { Feedback } from './Feedback/Feedback';
 import { AnotherLanguage } from './AnotherLanguage';
 import { LinksFooter } from './LinksFooter';
+import './styles.scss';
+import './adaptive.scss';
 
 export const About = () => (
   <div className="about">

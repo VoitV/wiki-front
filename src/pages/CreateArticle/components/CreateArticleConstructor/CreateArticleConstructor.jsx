@@ -3,10 +3,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { Headlines } from '../../../../components/Headlines';
 import { fetchArticlesPost } from '../../../../api';
-import './styles.scss';
 import { EditorTest } from './editor/EditorTest';
+import './styles.scss';
 
 export const CreateArticleConstructor = () => {
   const [titleInputValue, setTitleInputValue] = useState('');
@@ -20,18 +21,23 @@ export const CreateArticleConstructor = () => {
   const onHadleSubmit = async () => {
     const optionValue = optionRef.current.value;
     if (titleInputValue.length <= 0 || mainTextInputValue.length <= 0) {
-      const alert = document.getElementsByClassName('alert-required')[0];
-      alert.classList.add('show');
-      setTimeout(() => {
-        alert.classList.remove('show');
-      }, 3000);
+      toast('Заповніть поля!', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+        type: 'error',
+      });
     } else {
       const article = {
         articleTitle: titleInputValue,
         articleContent: mainTextInputValue,
         articleType: optionValue,
       };
-      console.log(article);
       await fetchArticlesPost(article);
       navigate('/');
     }
@@ -56,7 +62,6 @@ export const CreateArticleConstructor = () => {
               name="tile"
               value={titleInputValue}
               onChange={inputTitleChangeHandler}
-              required
             />
           </form>
         </div>

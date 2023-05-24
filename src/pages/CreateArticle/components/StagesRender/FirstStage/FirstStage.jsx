@@ -3,8 +3,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Headlines } from '../../../../../components/Headlines';
-import './styles.scss';
 import { NavLinkButton } from '../../ui/NavLinkButton';
+import './styles.scss';
+import './adaptive.scss';
 
 export const FirstStage = ({ stageStep, updateStep }) => {
   const onHandleUpdate = () => {

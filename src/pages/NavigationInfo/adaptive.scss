@@ -1,0 +1,22 @@
+@media screen and (max-width: 750px) {
+  .navigation-container {
+    display: flex;
+    flex-direction: column;
+
+    .navigation-titles-list {
+      width: 100% !important;
+      max-width: 100% !important;
+      border: 0;
+      border-bottom: 1px solid black;
+
+      .navigation-title-item {
+        width: 100% !important;
+      }
+    }
+
+    .navigation-item-layaout {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+}

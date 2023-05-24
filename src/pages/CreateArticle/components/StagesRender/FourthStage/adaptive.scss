@@ -1,0 +1,13 @@
+@media screen and (max-width: 1200px) {
+  .fourth-stage {
+    .fourth-stage-content {
+      .content-container {
+        flex-direction: column;
+
+        .container-right-part {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}

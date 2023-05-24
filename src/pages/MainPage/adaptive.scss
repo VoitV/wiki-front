@@ -1,0 +1,32 @@
+@media only screen and (max-width: 750px) {
+  .PageContent {
+    .content-container {
+      .main-layaout {
+        .main-layaout-container {
+          .main-page {
+            .main-page-layaout {
+              .layaout-top {
+                .layaot-top-header {
+                  flex-direction: column;
+                  text-align: center;
+
+                  .left-text {
+                    margin-bottom: 10px;
+                  }
+
+                  .right-text {
+                  }
+                }
+
+                .content-nav {
+                  flex-direction: column;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

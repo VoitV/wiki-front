@@ -1,0 +1,12 @@
+@media screen and (max-width: 900px) {
+  .first-stage {
+    .layaout-contnent-centre {
+      flex-direction: column;
+
+      .centre-right-part {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}

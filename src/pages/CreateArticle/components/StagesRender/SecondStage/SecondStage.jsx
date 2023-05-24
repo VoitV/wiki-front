@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import { NavLink } from 'react-router-dom';
 import { NavLinkButton } from '../../ui/NavLinkButton';
+import './styles.scss';
+import './adaptive.scss';
 
 export const SecondStage = ({ stageStep, updateStep }) => {
   const onHandleUpdate = () => {

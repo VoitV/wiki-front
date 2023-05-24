@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.scss';
+import './adaptive.scss';
 
 export const Introduction = () => (
   <div className="layaout-item">
