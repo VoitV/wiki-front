@@ -1,8 +1,6 @@
 const { VITE_API_BASE_URL } = import.meta.env;
 const START_URL = `${VITE_API_BASE_URL}/api/v1`;
 
-console.log('VITE_API_BASE_URL: ', VITE_API_BASE_URL);
-
 export const fetchRandomArticles = (limit) =>
   fetch(`${START_URL}/articlesRandom?limit=${limit}`)
     .then((res) => res.json())
